@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script type="text/javascript" src="../scripts/loadingTime.js"></script>
+    <meta charset="UTF-8">
+    <title>Цитатник</title>
+    <link rel="stylesheet" href="../App.css"/>
+    <script type="text/javascript" src="../scripts/router.js" defer></script>
+    <script type="module" src="../bin/spin.js/spin.js"></script>
+    <link rel="stylesheet" href="../bin/spin.js/spin.css">
+    <script type="module" src="../scripts/request.js" defer></script>
+</head>
+<body class="body">
+
+<header class="header">
+    <h1 onclick="window.location='../index.html'">Цитаты великих</h1>
+</header>
+
+<main class="main">
+    <section>
+        <article class="article-main">
+            <ol>
+                <h3>Список</h3>
+                <li>Мясо</li>
+                <li>Хлеб</li>
+                <li>Петрушка</li>
+            </ol>
+        </article>
+        <article class="article-main">
+            <h3>Запрос:</h3>
+            <span id="fetch"></span>
+        </article>
+    </section>
+</main>
+
+<aside class="aside">
+    <section>
+        <article id="philosophers.html" class="article-aside">
+            Мыслители древности
+        </article>
+        <article id="programmers.html" class="article-aside">
+            Программисты
+        </article>
+        <article id="business.html" class="article-aside">
+            Бизнесмены
+        </article>
+        <article id="form.html" class="article-aside">
+            Форма
+        </article>
+    </section>
+</aside>
+
+<footer class="footer">
+    <h4>
+        Контакты:
+    </h4>
+    <p>
+        Telegram: @someone
+    </p>
+    <p>
+        Email: support.fr@gmail.com
+    </p>
+    <p id="Timer"></p>
+</footer>
+
+</body>
+</html>

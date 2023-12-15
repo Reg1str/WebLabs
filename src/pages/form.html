@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script type="text/javascript" src="../scripts/loadingTime.js"></script>
+    <meta charset="UTF-8">
+    <title>Цитатник</title>
+    <link rel="stylesheet" href="../App.css"/>
+    <script type="text/javascript" src="../scripts/router.js" defer></script>
+    <script type="text/javascript" src="../scripts/form.js" defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../bin/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <link rel="stylesheet" href="../bin/Trumbowyg-main/dist/ui/trumbowyg.min.css">
+
+</head>
+<body class="body">
+
+<header class="header">
+    <h1 onclick="window.location='../index.html'">Цитаты великих</h1>
+</header>
+
+<main class="main">
+    <form id="form" class="article-main">
+        <div>Добавить в свой список<br>
+<!--            <label>-->
+<!--                <input id="my-editor" name="answer" type="text" size="60">-->
+<!--            </label>-->
+            <label for="my-editor"></label>
+            <textarea id="my-editor" name="answer"></textarea>
+        </div>
+        <div><input type="submit"></div>
+    </form>
+    <div class="article-main">
+        <h3>Свой список</h3>
+        <section id="content">
+
+        </section>
+    </div>
+</main>
+
+<aside class="aside">
+    <section>
+        <article id="philosophers.html" class="article-aside">
+            Мыслители древности
+        </article>
+        <article id="programmers.html" class="article-aside">
+            Программисты
+        </article>
+        <article id="business.html" class="article-aside">
+            Бизнесмены
+        </article>
+        <article id="form.html" class="article-aside">
+            Форма
+        </article>
+    </section>
+</aside>
+
+<footer class="footer">
+    <h4>
+        Контакты:
+    </h4>
+    <p>
+        Telegram: @someone
+    </p>
+    <p>
+        Email: support.fr@gmail.com
+    </p>
+    <p id="Timer"></p>
+</footer>
+
+<script>
+    $('#my-editor').trumbowyg();
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script type="text/javascript" src="../scripts/loadingTime.js"></script>
+    <meta charset="UTF-8">
+    <title>Цитатник</title>
+    <link rel="stylesheet" href="../App.css"/>
+    <script type="text/javascript" src="../scripts/router.js" defer></script>
+</head>
+<body class="body">
+
+<header class="header">
+    <h1 onclick="window.location='../index.html'">Цитаты великих</h1>
+</header>
+
+<main class="main">
+    <section>
+        <article class="article-main">
+            <h3>Код</h3>
+            <code>
+                function App() {<br>
+                const [board, setBoard] = useState(new Board())<br>
+                const [whitePlayer, setWhitePlayer] = useState(new Player(Colors.WHITE))<br>
+                const [blackPlayer, setBlackPlayer] = useState(new Player(Colors.BLACK))<br>
+                <br>
+                useEffect(() => {<br>
+                restart()<br>
+                }, [])<br>
+            </code>
+        </article>
+    </section>
+    <section>
+        <article class="article-main">
+            <h3>Формула</h3>
+            <p><i>X <sup><small>2</small></sup> + Y <sup><small>2</small></sup></i></p>
+        </article>
+    </section>
+</main>
+
+<aside class="aside">
+    <section>
+        <article id="philosophers.html" class="article-aside">
+            Мыслители древности
+        </article>
+        <article id="programmers.html" class="article-aside">
+            Программисты
+        </article>
+        <article id="business.html" class="article-aside">
+            Бизнесмены
+        </article>
+        <article id="form.html" class="article-aside">
+            Форма
+        </article>
+    </section>
+</aside>
+
+<footer class="footer">
+    <h4>
+        Контакты:
+    </h4>
+    <p>
+        Telegram: @someone
+    </p>
+    <p>
+        Email: support.fr@gmail.com
+    </p>
+    <p id="Timer"></p>
+</footer>
+
+</body>
+</html>

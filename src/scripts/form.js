@@ -1,19 +1,36 @@
 const content = document.getElementById("content")
+
+let answers = [];
+if (localStorage.length !== 0) {
+    let objects = JSON.parse(localStorage.getItem("answers"));
+}
 function serializeForm() {
     const form = document.getElementById('form');
     const answer = form.querySelector('[name="answer"]')
-    id = window.localStorage.length
-    window.localStorage.setItem(id.toString(), answer.value)
+    answers.push(answer.value)
+    // id = window.localStorage.length
+    localStorage.setItem("answers", JSON.stringify(answers));
+    // window.localStorage.setItem(id.toString(), answer.value)
 }
 
 function render(){
-    let objects = {...localStorage}
-    Object.keys(objects).forEach(key => {
+    let objects = []
+    // let objects = {...localStorage}
+    if (window.localStorage.length !== null) {
+        objects = JSON.parse(localStorage.getItem("answers"));
+    }
+    // Object.keys(objects).forEach(key => {
+    //     let element = document.createElement('article');
+    //
+    //     element.classList.add("article-main")
+    //     element.innerHTML = objects[key]
+    //
+    //     content.appendChild(element);
+    // });
+    objects.map(function(item, index, array) {
         let element = document.createElement('article');
-
         element.classList.add("article-main")
-        element.innerHTML = objects[key]
-
+        element.innerHTML = item
         content.appendChild(element);
     });
 }

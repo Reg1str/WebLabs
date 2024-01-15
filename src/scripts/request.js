@@ -18,7 +18,7 @@ async function request() {
 
 
     await sleep(5000)
-    fetch(`https://jsonplaceholder.typicode.com/todos?userId=${rndInt}`)
+    fetch(`https://jsonplaceholder.typicode.com/todo?userId=${rndInt}`)
         .then(function (response){
             if (!response.ok) {
                 throw new Error('Статус: ' + response.status);
@@ -33,6 +33,10 @@ async function request() {
                 container.insertAdjacentHTML('beforeend',"<li>" + element.title + " </li>")
             });
         })
+        .catch((e) => {
+            document.getElementsByClassName("spinner")[0].remove()
+            container.insertAdjacentHTML("beforeend", "<p>"+ "Ошибка" +"</p>")
+        });
 }
 
 document.addEventListener('DOMContentLoaded', request);

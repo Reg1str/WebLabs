@@ -113,6 +113,12 @@
     font-size: 1.25rem;
 }
 
+.input {
+    width: 18vw;
+    height: 3vh;
+    font-size: 1.25rem;
+}
+
 .home {
     display: grid;
     justify-items: center;
